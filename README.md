@@ -1,7 +1,9 @@
 # operator-system
 前面的作業在Branch中
+# //---------week5-------------
+In Section 6.7.1, we presented a semaphore-based solution to the producer–consumer problem using a bounded buffer. In this project, you will design a programming solution to the bounded-buffer problem using the producer and consumer processes shown in Figures 6.9 and 6.10. The solution presented in Section 6.7.1 uses three semaphores: empty and full, which count the number of empty and full slots in the buffer, and mutex, which is a binary (or mutualexclusion) semaphore that protects the actual insertion or removal of items in the buffer. For this project, you will use standard counting semaphores for empty and full and a mutex lock, rather than a binary semaphore, to represent mutex. The producer and consumer—running as separate threads—will move items to and from a buffer that is synchronized with the empty, full, and mutex structures. You can solve this problem using either Pthreads or the Windows API.
 
-# //---------hw4-------------
+# //---------week4-------------
 Write a multithreaded program that calculates various statistical values for a list of numbers. This program will be passed a series of numbers on the command line and will then create three separate worker threads. One thread will determine the average of the numbers, the second will determine the maximum value, and the third will determine the minimum value. For example, suppose your program is passed
 the integers
    90 81 78 95 79 72 85
@@ -11,7 +13,7 @@ The program will report
   The maximum value is 95
 The variables representing the average, minimum, and maximum values will be stored globally. The worker threads will set these values, and the parent thread will output the values once the workers have exited. (We could obviously expand this program by creating additional threads that determine other statistical values, such as median and standard deviation.)
 
-# //---------hw3-------------
+# //---------week3-------------
 16.Section 3.6.1 describes port numbers below 1024 as being well known —that is, they provide standard services. Port 17 is known as thequote-of-the-day service. When a client connects to port 17 on a server,the server responds with a quote for that day.
   Modify the date server shown in Figure 3.21 so that it delivers a quote of the day rather than the current date. The quotes should be
 printable ASCII characters and should contain fewer than 512 characters,although multiple lines are allowed. Since port 17 is well known and therefore unavailable, have your server listen to port 6017. The date client shown in Figure 3.22 can be used to read the quotes returned by your server.
@@ -31,11 +33,11 @@ the file input.txt will be written to the pipe. The child process will read the 
 You may write this program using either UNIX or Windows pipes.
 
 
-# //---------hw2-------------
+# //---------week2-------------
   The second part of this project involves modifying the kernel module so that it uses the kernel linked-list data structure.
   In Section 1.10, we covered various data structures that are common in operating systems. The Linux kernel provides several of these structures. Here,we explore using the circular, doubly linked list that is available to kernel developers. Much of what we discuss is available in the Linux source code —in this instance, the include file <linux/list.h>— and we recommend that you examine this file as you proceed through the following steps.
   Initially, you must define a struct containing the elements that are to be inserted in the linked list. The following C struct defines birthdays:
-  
+
  struct birthday {
   int day;
   int month;

@@ -1,2 +1,2 @@
-all: os.c
-	gcc os.c -o os -lpthread
+all: buffer.c
+	gcc -pthread buffer.c -o excute
