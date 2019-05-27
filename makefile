@@ -1,2 +1,2 @@
-all: buffer.c
-	gcc -pthread buffer.c -o excute
+all: banker.c
+	gcc -pthread banker.c -o a.out
